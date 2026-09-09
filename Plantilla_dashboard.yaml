@@ -1,76 +1,72 @@
-type: grid
-styles:
-  card:
-    --user-grid-template-columns: 1fr 1.2fr
-    --user-grid-aspect-ratio: 16/9
-    --user-grid-template-areas: '''i e'''
-cards:
-  - type: custom:room-summary-card
-    area: cuarto_01
-    area_name: Recamara
-    features:
-      - multi_light_background
-      - hide_area_stats
-    entities:
-      - entity_id: switch.cama_01_switch_1
-      - entity_id: switch.cama_01_switch_2
-      - entity_id: switch.cama_01_switch_3
-    lights:
-      - switch.cama_01_switch_1
-      - switch.cama_01_switch_2
-      - switch.cama_01_switch_3
-  - type: custom:room-summary-card
-    area: vestidores
-    area_name: Vestidor
-    features:
-      - multi_light_background
-      - hide_area_stats
-      - skip_entity_styles
-    entities:
-      - entity_id: switch.vestidor_01_1_switch_3
-        on_color: green
-        off_color: gray
-      - entity_id: switch.vestidor_01_2_switch_2
-        on_color: green
-        off_color: gray
-      - entity_id: switch.vestidor_01_2_switch_3
-        on_color: green
-        off_color: gray
-    lights:
-      - switch.vestidor_01_1_switch_3
-      - switch.vestidor_01_2_switch_2
-      - switch.vestidor_01_2_switch_3
-  - type: custom:room-summary-card
-    area: banos
-    area_name: Baño
-    features:
-      - multi_light_background
-      - hide_area_stats
-      - skip_entity_styles
-    entities:
-      - entity_id: switch.entrada_a_bano_switch_1
-        on_color: red
-        off_color: gray
-      - entity_id: switch.entrada_a_bano_switch_2
-        on_color: red
-        off_color: gray
-      - entity_id: switch.entrada_a_bano_switch_3
-        on_color: red
-        off_color: gray
-      - entity_id: switch.bano_jacuzzi_switch_1
-        on_color: red
-        off_color: gray
-      - entity_id: switch.bano_01_inodoro_switch_1
-        on_color: red
-        off_color: gray
-      - entity_id: switch.w602_ble_11_switch_2
-        on_color: orange
-        off_color: gray
-    lights:
-      - switch.entrada_a_bano_switch_1
-      - switch.entrada_a_bano_switch_2
-      - switch.entrada_a_bano_switch_3
-      - switch.w602_ble_11_switch_2
-      - switch.bano_01_inodoro_switch_1
-      - switch.bano_jacuzzi_switch_1
-column_span: 2
+type: custom:room-summary-card
+area: cuarto_01
+area_name: Recamara
+features:
+  - multi_light_background
+  - hide_area_stats
+entities:
+  - entity_id: switch.cama_01_switch_1
+  - entity_id: switch.cama_01_switch_2
+  - entity_id: switch.cama_01_switch_3
+lights:
+  - switch.cama_01_switch_1
+  - switch.cama_01_switch_2
+  - switch.cama_01_switch_3
+- type: custom:room-summary-card
+area: vestidores
+area_name: Vestidor
+features:
+  - multi_light_background
+  - hide_area_stats
+  - skip_entity_styles
+entities:
+  - entity_id: switch.vestidor_01_1_switch_3
+    on_color: green
+    off_color: gray
+  - entity_id: switch.vestidor_01_2_switch_2
+    on_color: green
+    off_color: gray
+  - entity_id: switch.vestidor_01_2_switch_3
+    on_color: green
+    off_color: gray
+lights:
+  - switch.vestidor_01_1_switch_3
+  - switch.vestidor_01_2_switch_2
+  - switch.vestidor_01_2_switch_3
+- type: custom:room-summary-card
+area: banos
+area_name: Baño
+features:
+  - multi_light_background
+  - hide_area_stats
+  - skip_entity_styles
+entities:
+  - entity_id: switch.entrada_a_bano_switch_1
+    on_color: red
+    off_color: gray
+  - entity_id: switch.entrada_a_bano_switch_2
+    on_color: red
+    off_color: gray
+  - entity_id: switch.entrada_a_bano_switch_3
+    on_color: red
+    off_color: gray
+  - entity_id: switch.bano_jacuzzi_switch_1
+    on_color: red
+    off_color: gray
+  - entity_id: switch.bano_01_inodoro_switch_1
+    on_color: red
+    off_color: gray
+  - entity_id: switch.w602_ble_11_switch_2
+    on_color: orange
+    off_color: gray
+lights:
+  - switch.entrada_a_bano_switch_1
+  - switch.entrada_a_bano_switch_2
+  - switch.entrada_a_bano_switch_3
+  - switch.w602_ble_11_switch_2
+  - switch.bano_01_inodoro_switch_1
+  - switch.bano_jacuzzi_switch_1
+
+grid_options:
+  columns: 9
+  rows: 5
