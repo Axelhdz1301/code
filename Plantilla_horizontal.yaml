@@ -1,0 +1,22 @@
+type: custom:room-summary-card
+area: Cocina
+entities:
+  - entity_id: switch.cocina_dark_kitchen_switch_1
+    icon: mdi:lightbulb-on-60
+styles:
+  entities:
+    grid-template-columns: 1fr 1fr 1fr 1fr !important
+    grid-template-rows: 1fr  !important
+    align-items: normal !important
+  card:
+    --user-grid-template-areas: '''i e'''
+    --user-grid-template-columns: 1fr 1fr
+    --user-grid-template-rows: 1fr
+    --user-grid-aspect-ratio: 7/1
+  title:
+    margin-top: 14%
+features:
+  - exclude_default_entities
+  - hide_area_stats
+  - hide_room_icon
+  - show_entity_label

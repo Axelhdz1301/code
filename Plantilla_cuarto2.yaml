@@ -1,0 +1,67 @@
+type: custom:room-summary-card #Tarjeta de vestidor
+area: cuarto_02
+area_name: Recamara
+features:
+  - multi_light_background
+  - hide_area_stats
+  - show_entity_labels
+entities:
+  - entity_id: switch.cama_02_switch_1
+    label: Central
+    icon: mdi:wall-sconce-flat
+  - entity_id: switch.cama_02_switch_2
+    label: LED
+    icon: mdi:led-strip-variant
+  - entity_id: switch.cama_02_switch_3
+    label: Redondas
+    icon: mdi:lightbulb-spot
+lights:
+  - switch.cama_01_switch_1
+  - switch.cama_01_switch_2
+  - switch.cama_01_switch_3
+grid_options:
+  columns: 9
+  rows: 5
+actions:
+  tap_action:
+    action: perform-action
+    perform_action: switch.toggle
+    target:
+      entity_id:
+        - switch.cama_02_switch_1
+        - switch.cama_02_switch_2
+        - switch.cama_02_switch_3
+
+type: custom:room-summary-card #Targeta de baño
+area: banos
+area_name: Baño
+features:
+  - multi_light_background
+  - hide_area_stats
+  - skip_entity_styles
+  - show_entity_labels
+entities:
+  - entity_id: switch.cuarto_02_bano_02_switch_1 #Cuadradas
+    on_color: red
+    off_color: gray
+    icon: mdi:wall-sconce-flat
+  - entity_id: switch.cuarto_02_bano_02_switch_2 #Redondas
+    on_color: red
+    off_color: gray
+    icon: mdi:lightbulb-spot
+  - entity_id: switch.cuarto_02_bano_02_switch_3 #LED
+    on_color: red
+    off_color: gray
+    icon: mdi:led-strip-variant
+  - entity_id: switch.cuarto_02_bano_02_switch_4 #Extractor
+    on_color: red
+    off_color: gray
+    icon: mdi:fan-chevron-up
+lights:
+  - switch.cuarto_02_bano_02_switch_1
+  - switch.cuarto_02_bano_02_switch_2
+  - switch.cuarto_02_bano_02_switch_3
+  - switch.cuarto_02_bano_02_switch_4
+grid_options:
+  columns: 9
+  rows: 5

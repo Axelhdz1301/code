@@ -36,16 +36,23 @@ features:
   - multi_light_background
   - hide_area_stats
   - skip_entity_styles
+  - show_entity_labels
 entities:
   - entity_id: switch.vestidor_01_1_switch_3
     on_color: green
     off_color: gray
+    icon: mdi:wall-sconce-flat
+    label: Cuadradas
   - entity_id: switch.vestidor_01_2_switch_2
     on_color: green
     off_color: gray
+    icon: mdi:led-strip-variant
+    label: LED
   - entity_id: switch.vestidor_01_2_switch_3
     on_color: green
     off_color: gray
+    icon: mdi:lightbulb-spot
+    label: Redondas
 lights:
   - switch.vestidor_01_1_switch_3
   - switch.vestidor_01_2_switch_2
@@ -53,6 +60,9 @@ lights:
 grid_options:
   columns: 9
   rows: 5
+styles:
+  entity_icon: {}
+
 
 type: custom:room-summary-card #Targeta de baño
 area: banos
@@ -61,6 +71,7 @@ features:
   - multi_light_background
   - hide_area_stats
   - skip_entity_styles
+  - show_entity_labels
 entities:
   - entity_id: switch.entrada_a_bano_switch_1
     on_color: red
