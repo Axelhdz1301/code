@@ -1,0 +1,24 @@
+type: custom:room-summary-card #Tarjeta de Sala
+area: Sala
+area_name: Sala
+features:
+  - multi_light_background
+  - hide_area_stats
+  - skip_entity_styles
+  - show_entity_labels
+entities:
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_1
+    icon: mdi:chandelier
+    label: Central
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_2
+    icon: mdi:lightbulb-spot
+    label: Redondas
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_3
+    icon: mdi:led-strip-variant
+    label: LED
+lights:
+  - switch.domotic_center_modulo_16_switch_switch_1
+  - switch.domotic_center_modulo_16_switch_switch_2
+  - switch.domotic_center_modulo_16_switch_switch_3
+columns: 9
+rows: 5
