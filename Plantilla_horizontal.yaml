@@ -115,3 +115,68 @@ features:
   - hide_room_icon
   - show_entity_labels
 
+type: custom:room-summary-card
+area: Escenario #Tarjeta para Escenario
+entities:
+  - entity_id: switch.domotic_center_relay_16ch_switch_12
+    icon: mdi:led-strip
+    label: LED Piso
+  - entity_id: switch.domotic_center_relay_16ch_switch_13
+    icon: mdi:lightbulb-spot
+    label: Redondas
+  - entity_id: switch.domotic_center_relay_16ch_switch_14
+    icon: mdi:vanity-light
+    label: Reflectores RGB
+  - entity_id: switch.domotic_center_relay_16ch_switch_15
+    icon: mdi:wall_sconce_flat
+    label: Cuadradas
+  - entity_id: switch.domotic_center_relay_16ch_switch_16
+    icon: mdi:led-strip-variant
+    label: LED Techo
+styles:
+  entities:
+    grid-template-columns: 1fr 1fr 1fr 1fr !important
+    grid-template-rows: 1fr  !important
+    align-items: normal !important
+  card:
+    --user-grid-template-areas: '''i e'''
+    --user-grid-template-columns: 1fr 1fr
+    --user-grid-template-rows: 1fr
+    --user-grid-aspect-ratio: 7/1
+  title:
+    margin-top: 14%
+features:
+  - exclude_default_entities
+  - hide_area_stats
+  - hide_room_icon
+  - show_entity_labels
+
+type: custom:room-summary-card
+area: Porche #Tarjeta para Porche
+entities:
+  - entity_id: switch.domotic_center_relay_16ch_switch_12
+    icon: mdi:chandelier
+    label: LED Piso
+  - entity_id: switch.domotic_center_relay_16ch_switch_10
+    icon: mdi:lightbulb-spot
+    label: Redondas
+  - entity_id: switch.domotic_center_relay_16ch_switch_11
+    icon: mdi:led-strip-variant
+    label: LED
+styles:
+  entities:
+    grid-template-columns: 1fr 1fr 1fr 1fr !important
+    grid-template-rows: 1fr  !important
+    align-items: normal !important
+  card:
+    --user-grid-template-areas: '''i e'''
+    --user-grid-template-columns: 1fr 1fr
+    --user-grid-template-rows: 1fr
+    --user-grid-aspect-ratio: 7/1
+  title:
+    margin-top: 14%
+features:
+  - exclude_default_entities
+  - hide_area_stats
+  - hide_room_icon
+  - show_entity_labels
