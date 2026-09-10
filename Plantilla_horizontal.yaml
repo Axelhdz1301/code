@@ -20,3 +20,98 @@ features:
   - hide_area_stats
   - hide_room_icon
   - show_entity_labels
+
+  # Seccion Planta baja
+type: custom:room-summary-card
+area: Sala #Tarjeta para sala
+entities:
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_1
+    icon: mdi:chandelier
+    label: Central
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_2
+    icon: mdi:lightbulb-spot
+    label: Redondas
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_3
+    icon: mdi:led-strip-variant
+    label: LED
+styles:
+  entities:
+    grid-template-columns: 1fr 1fr 1fr 1fr !important
+    grid-template-rows: 1fr  !important
+    align-items: normal !important
+  card:
+    --user-grid-template-areas: '''i e'''
+    --user-grid-template-columns: 1fr 1fr
+    --user-grid-template-rows: 1fr
+    --user-grid-aspect-ratio: 7/1
+  title:
+    margin-top: 14%
+features:
+  - exclude_default_entities
+  - hide_area_stats
+  - hide_room_icon
+  - show_entity_labels
+
+type: custom:room-summary-card
+area: Comedor #Tarjeta para comedor
+entities:
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_4
+    icon: mdi:chandelier
+    label: Central
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_5
+    icon: mdi:lightbulb-spot
+    label: Redondas
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_6
+    icon: mdi:led-strip-variant
+    label: LED
+styles:
+  entities:
+    grid-template-columns: 1fr 1fr 1fr 1fr !important
+    grid-template-rows: 1fr  !important
+    align-items: normal !important
+  card:
+    --user-grid-template-areas: '''i e'''
+    --user-grid-template-columns: 1fr 1fr
+    --user-grid-template-rows: 1fr
+    --user-grid-aspect-ratio: 7/1
+  title:
+    margin-top: 14%
+features:
+  - exclude_default_entities
+  - hide_area_stats
+  - hide_room_icon
+  - show_entity_labels
+
+type: custom:room-summary-card
+area: Cocina #Tarjeta para cocina
+entities:
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_7
+    icon: mdi:led-strip-variant
+    label: LED int
+  - entity_id: switch.domotic_center_modulo_16_switch_switch_8
+    icon: mdi:led-strip
+    label: LED ext
+  - entity_id: switch.6_way_controller_switch_4
+    icon: mdi:chandelier
+    label: Central
+  - entity_id: switch.6_way_controller_switch_5
+    icon: mdi:lightbulb-spot
+    label: Redondas
+styles:
+  entities:
+    grid-template-columns: 1fr 1fr 1fr 1fr !important
+    grid-template-rows: 1fr  !important
+    align-items: normal !important
+  card:
+    --user-grid-template-areas: '''i e'''
+    --user-grid-template-columns: 1fr 1fr
+    --user-grid-template-rows: 1fr
+    --user-grid-aspect-ratio: 7/1
+  title:
+    margin-top: 14%
+features:
+  - exclude_default_entities
+  - hide_area_stats
+  - hide_room_icon
+  - show_entity_labels
+
