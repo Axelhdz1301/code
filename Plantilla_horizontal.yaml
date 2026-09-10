@@ -19,4 +19,4 @@ features:
   - exclude_default_entities
   - hide_area_stats
   - hide_room_icon
-  - show_entity_label
+  - show_entity_labels
