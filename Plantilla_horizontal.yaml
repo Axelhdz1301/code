@@ -188,14 +188,22 @@ features:
   - show_entity_labels
 
 type: custom:room-summary-card
-area: Porche #Tarjeta para Pasillo invitados
+area: Escalera #Tarjeta para Escalera
 entities:
-  - entity_id: switch.domotic_center_relay_16ch_switch_9
+  - entity_id: switch.6_way_controller_switch_1
     icon: mdi:led-strip-variant
     label: LED Piso
-  - entity_id: switch.cuarto_de_invitados_inv_pas_entrada_cuadradas
+  - entity_id: switch.6_way_controller_switch_2
+    icon: mdi:lightbulb-spot
+    label: Redondas
+  - entity_id: switch.6_way_controller_switch_3
     icon: mdi:wall-sconce-flat
-    label: Cuadradas
+    label: Central
+  - entity_id: switch.6_way_controller_switch_6
+    icon: mdi:vanity-light
+    label: Reflectores
+  - entity_id: switch.escalera_pb_switch_1
+    label: Escalera
 styles:
   entities:
     grid-template-columns: 1fr 1fr 1fr 1fr !important
@@ -213,3 +221,55 @@ features:
   - hide_area_stats
   - hide_room_icon
   - show_entity_labels
+
+type: custom:room-summary-card
+area: Entrada #Tarjeta para Entrada
+entities:
+  - entity_id: switch.controlador_entrada_principal_switch_1
+    icon: mdi:led-strip-variant
+    label: LED Muro
+  - entity_id: switch.controlador_entrada_principal_switch_2
+    icon: mdi:lightbulb-spot
+    label: Exterior
+  - entity_id: switch.controlador_entrada_principal_switch_3
+    icon: mdi:lightbulb-spot
+    label: Entrada
+styles:
+  entities:
+    grid-template-columns: 1fr 1fr 1fr 1fr !important
+    grid-template-rows: 1fr  !important
+    align-items: normal !important
+  card:
+    --user-grid-template-areas: '''i e'''
+    --user-grid-template-columns: 1fr 1fr
+    --user-grid-template-rows: 1fr
+    --user-grid-aspect-ratio: 7/1
+  title:
+    margin-top: 14%
+features:
+  - exclude_default_entities
+  - hide_area_stats
+  - hide_room_icon
+  - show_entity_labels
+
+type: custom:room-summary-card #Targeta de Control garage
+area: garage
+area_name: Garage
+features:
+  - multi_light_background
+  - hide_area_stats
+  - skip_entity_styles
+  - show_entity_labels
+entities:
+  - entity_id: switch.apertura_sonoff_10028c9c28_1
+    on_color: red
+    off_color: gray
+  - entity_id: switch.cierre_sonoff_100290f26c_1
+    on_color: purple
+    off_color: gray
+lights:
+  - switch.apertura_sonoff_10028c9c28_1
+  - switch.cierre_sonoff_100290f26c_1
+grid_options:
+  columns: 9
+  rows: 5
